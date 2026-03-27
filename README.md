@@ -34,8 +34,9 @@ Returns:
 Example API
 
 ```
-GET /movies/shows?movieName=Avengers&city=Bangalore&date=2026-04-01
+GET /movies/shows?movieName=Avengers&city=Bangalore&date=2026-04-01&showTime=10:00:00
 ```
+showTime is optional value
 
 Example Response
 
@@ -151,7 +152,7 @@ Examples
 | Scenario            | HTTP Status |
 | ------------------- | ----------- |
 | Show not found      | 404         |
-| Seat already booked | 409         |
+| Seat already booked | 500         |
 
 ---
 
@@ -200,7 +201,5 @@ Password:
 # Future Improvements
 
 * Payment gateway integration
-* Redis caching for shows
-* Distributed locking for seat booking
 * Microservice architecture
 * Authentication and user accounts
