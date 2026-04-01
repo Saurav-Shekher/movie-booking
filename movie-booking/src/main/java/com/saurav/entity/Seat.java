@@ -5,7 +5,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 public class Seat {
 
@@ -17,30 +27,6 @@ public class Seat {
 
     @ManyToOne
     private Screen screen;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getSeatNumber() {
-		return seatNumber;
-	}
-
-	public void setSeatNumber(String seatNumber) {
-		this.seatNumber = seatNumber;
-	}
-
-	public Screen getScreen() {
-		return screen;
-	}
-
-	public void setScreen(Screen screen) {
-		this.screen = screen;
-	}
     
     
 }
